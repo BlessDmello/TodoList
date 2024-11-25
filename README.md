@@ -70,4 +70,8 @@ This repository contains a Simple Todo List Application built using the MERN sta
 
 ```arduino
     http://localhost:5173/
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> a018fcbdb5dad9faff94fdfa03c21d37c7eb501e
