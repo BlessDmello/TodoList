@@ -38,6 +38,4 @@ app.post('/add', (req,res) => {
     .catch(err => res.json(err))
 })
 
-app.listen(3000, () => {
-    console.log("Server is Running")
-})
+app.listen(process.env.PORT, () => console.log('Server has been started successfully'))
