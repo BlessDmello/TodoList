@@ -8,7 +8,18 @@ app.use(cors())
 app.use(express.json())
 
 mongoose.set('strictQuery', false)
-mongoose.connect(process.env.MONGO_URL, () => console.log('DB is successfully connected'))
+//mongoose.connect(process.env.MONGO_URL, () => console.log('DB is successfully connected'))
+const connectToMongo = async () => {
+    try {
+        mongoose.set('strictQuery', false)
+        mongoose.connect(process.env.MONGO_URL) 
+        console.log('Mongo connected')
+    }
+    catch(error) {
+        console.log(error)
+        process.exit()
+    }
+    }
 
 app.get('/get', (req,res) => {
     TodoModel.find()
